@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 130.0
-const JUMP_VELOCITY = -310.0
+const JUMP_VELOCITY = -410.0
 
 @onready var animated_sprite = $AnimatedSprite2D
 func _physics_process(delta):
