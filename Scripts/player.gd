@@ -1,13 +1,8 @@
 extends CharacterBody2D
-@onready var tag_icon = $TagIcon
 
 
-var is_tagger: bool=false
-const SPEED = 150.0
-const JUMP_VELOCITY = -370.0
-
-func _ready():
-	tag_icon.visible = false
+const SPEED = 130.0
+const JUMP_VELOCITY = -410.0
 
 @onready var animated_sprite = $AnimatedSprite2D
 func _physics_process(delta):
