@@ -1,19 +1,19 @@
-[gd_scene load_steps=12 format=3 uid="uid://c7l0h5i014xe8"]
+[gd_scene load_steps=10 format=3 uid="uid://c7l0h5i014xe8"]
 
 [ext_resource type="Script" uid="uid://dh4vgscjqtcv4" path="res://Scripts/player.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://c85bmn0xpnlgw" path="res://assets/Character spritespng.png" id="2_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://c6hkv6e23jn1l" path="res://assets/character_sprite1.png" id="2_cvnsp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
 atlas = ExtResource("2_cvnsp")
-region = Rect2(0, 0, 17, 26)
+region = Rect2(0, 0, 20, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
 atlas = ExtResource("2_cvnsp")
-region = Rect2(17, 0, 17, 26)
+region = Rect2(20, 0, 20, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fkybt"]
 atlas = ExtResource("2_cvnsp")
-region = Rect2(34, 0, 17, 26)
+region = Rect2(40, 0, 20, 26)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x3wgy"]
 animations = [{
@@ -33,21 +33,15 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
-size = Vector2(8.91667, 13.75)
+size = Vector2(10.6667, 13.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6t5aa"]
-size = Vector2(10.5, 5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vgqql"]
-size = Vector2(17, 7)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkybt"]
-size = Vector2(4.5, 7)
+size = Vector2(7.625, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3wgy"]
-size = Vector2(12, 3)
+size = Vector2(7.5, 2.5)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player1RED" type="CharacterBody2D"]
 script = ExtResource("1_cvnsp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -59,22 +53,17 @@ autoplay = "idle"
 frame_progress = 0.00586087
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(1.6875, -19.6875)
+position = Vector2(4, -18)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_cvnsp")
+one_way_collision_margin = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.25, -7)
+position = Vector2(3.8125, -5.5)
 shape = SubResource("RectangleShape2D_6t5aa")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, -24.5)
-shape = SubResource("RectangleShape2D_vgqql")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
-position = Vector2(9.75, -30.5)
-shape = SubResource("RectangleShape2D_fkybt")
+one_way_collision_margin = 0.0
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
-position = Vector2(2, -31.5)
+position = Vector2(3.75, -28.75)
 shape = SubResource("RectangleShape2D_x3wgy")
+one_way_collision_margin = 0.0
