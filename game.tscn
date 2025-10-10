@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://brrhhwg1yoges" path="res://assets/Grass block.png" id="1_ebmjs"]
 [ext_resource type="Texture2D" uid="uid://x67vfrvly5cm" path="res://assets/without grass block.png" id="2_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://c7l0h5i014xe8" path="res://Scenes/player.tscn" id="3_3dryh"]
-[ext_resource type="PackedScene" uid="uid://dcjthp0btgth2" path="res://Scenes/player2BLUE.tscn" id="5_wowpa"]
+[ext_resource type="PackedScene" uid="uid://cddk8cbr6rpem" path="res://Scenes/player2BLUE.tscn" id="5_wowpa"]
 [ext_resource type="PackedScene" uid="uid://cxy7dgk0ihswb" path="res://Scenes/player3GREEEN.tscn" id="6_i6g32"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i6g32"]
