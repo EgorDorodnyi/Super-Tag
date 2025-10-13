@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=4 uid="uid://dro8sttg8ngvs"]
+[gd_scene load_steps=11 format=4 uid="uid://dro8sttg8ngvs"]
 
 [ext_resource type="Texture2D" uid="uid://brrhhwg1yoges" path="res://assets/Grass block.png" id="1_ebmjs"]
 [ext_resource type="Texture2D" uid="uid://x67vfrvly5cm" path="res://assets/without grass block.png" id="2_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://c7l0h5i014xe8" path="res://Scenes/player.tscn" id="3_3dryh"]
 [ext_resource type="Texture2D" uid="uid://b3kh8vjacbr5" path="res://assets/Background Sky.png" id="3_wowpa"]
+[ext_resource type="Script" uid="uid://boe5jk13uvp7j" path="res://Scenes/camera_2d.gd" id="5_wowpa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3dryh"]
 texture = ExtResource("3_wowpa")
@@ -796,3 +797,4 @@ limit_top = -202
 limit_right = 288
 limit_bottom = 120
 position_smoothing_enabled = true
+script = ExtResource("5_wowpa")
