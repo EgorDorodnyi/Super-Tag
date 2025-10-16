@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://c7l0h5i014xe8"]
+[gd_scene load_steps=11 format=3 uid="uid://c7l0h5i014xe8"]
 
 [ext_resource type="Script" uid="uid://dh4vgscjqtcv4" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://c6hkv6e23jn1l" path="res://assets/character_sprite1.png" id="2_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://cdvt52qphem72" path="res://assets/Screenshot 2025-10-11 181326.png" id="3_6t5aa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
 atlas = ExtResource("2_cvnsp")
@@ -67,3 +68,8 @@ one_way_collision_margin = 0.0
 position = Vector2(3.75, -28.75)
 shape = SubResource("RectangleShape2D_x3wgy")
 one_way_collision_margin = 0.0
+
+[node name="TagIcon" type="Sprite2D" parent="."]
+position = Vector2(0.6875, -35)
+scale = Vector2(0.023, 0.023)
+texture = ExtResource("3_6t5aa")

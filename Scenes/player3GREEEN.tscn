@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cxy7dgk0ihswb"]
+[gd_scene load_steps=9 format=3 uid="uid://cxy7dgk0ihswb"]
 
 [ext_resource type="Texture2D" uid="uid://b8fr56yi3h6pv" path="res://assets/character_sprite2,3,4.png" id="1_hfdim"]
 [ext_resource type="Script" uid="uid://c2qyobe80nghr" path="res://Scripts/player_3greeen.gd" id="1_qr8hp"]
+[ext_resource type="Texture2D" uid="uid://cdvt52qphem72" path="res://assets/Screenshot 2025-10-11 181326.png" id="3_ch8tf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qr8hp"]
 atlas = ExtResource("1_hfdim")
@@ -28,7 +29,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_0xnk0")
 }],
 "loop": true,
-"name": &"default",
+"name": &"new_animation",
 "speed": 5.0
 }]
 
@@ -40,9 +41,14 @@ script = ExtResource("1_qr8hp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_m8dek")
-autoplay = "default"
-frame_progress = 0.59285
+animation = &"new_animation"
+autoplay = "new_animation"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, 1)
 shape = SubResource("RectangleShape2D_um5up")
+
+[node name="TagIcon" type="Sprite2D" parent="."]
+position = Vector2(1, -12)
+scale = Vector2(0.0163793, 0.0163328)
+texture = ExtResource("3_ch8tf")

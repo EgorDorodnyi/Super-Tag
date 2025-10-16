@@ -1,10 +1,10 @@
 extends CharacterBody2D
-
-
+@onready var tag_icon=$TagIcon
+var is_tagger:bool=(false)
 const SPEED = 150.0
 const JUMP_VELOCITY = -370.0
 
-
+@onready var animated_sprites=$AnimatedSprite2D
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -21,5 +21,11 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
 	move_and_slide()
+func _on_Area_body_entered(body):
+	if is_tagger and body is CharacterBody2D:
+		body.set_as_tagger(true)
+		set_as_tagger(false)
+func set_as_tagger(value: bool):
+	is_tagger = value
+	tag_icon.visible = value
