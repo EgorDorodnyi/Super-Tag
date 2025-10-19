@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c465fwgtg6vqa"]
+
+[ext_resource type="Texture2D" uid="uid://bmirrl4dqib7v" path="res://assets/bouncepad.png" id="1_22a2o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_22a2o"]
+size = Vector2(25, 18)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_22a2o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 7)
+shape = SubResource("RectangleShape2D_22a2o")
