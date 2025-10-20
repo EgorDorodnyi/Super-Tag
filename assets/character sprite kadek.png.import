@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dud7m1v3ltdll"
-path="res://.godot/imported/DONTUSE.png-35875658c38763118468f6518edd5ebc.ctex"
+uid="uid://sm0q5pak5cx6"
+path="res://.godot/imported/character sprite kadek.png-b57442ff92614988ce7da48bbb924644.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DONTUSE.png"
-dest_files=["res://.godot/imported/DONTUSE.png-35875658c38763118468f6518edd5ebc.ctex"]
+source_file="res://assets/character sprite kadek.png"
+dest_files=["res://.godot/imported/character sprite kadek.png-b57442ff92614988ce7da48bbb924644.ctex"]
 
 [params]
 
