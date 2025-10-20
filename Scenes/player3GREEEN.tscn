@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://cxy7dgk0ihswb"]
 
+[ext_resource type="Script" uid="uid://sdry6b4p1oxy" path="res://Scripts/player_4yellow.gd" id="1_ch8tf"]
 [ext_resource type="Texture2D" uid="uid://b8fr56yi3h6pv" path="res://assets/character_sprite2,3,4.png" id="1_hfdim"]
-[ext_resource type="Script" uid="uid://c2qyobe80nghr" path="res://Scripts/player_3greeen.gd" id="1_qr8hp"]
 [ext_resource type="Texture2D" uid="uid://cdvt52qphem72" path="res://assets/Screenshot 2025-10-11 181326.png" id="3_ch8tf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qr8hp"]
@@ -37,7 +37,7 @@ animations = [{
 size = Vector2(11, 18)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-script = ExtResource("1_qr8hp")
+script = ExtResource("1_ch8tf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_m8dek")
