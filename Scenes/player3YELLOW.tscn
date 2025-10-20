@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://btijnda8dqo26"]
+[gd_scene load_steps=7 format=3 uid="uid://btijnda8dqo26"]
 
 [ext_resource type="Texture2D" uid="uid://b8fr56yi3h6pv" path="res://assets/character_sprite2,3,4.png" id="1_2oyov"]
 
@@ -31,8 +31,15 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2oyov"]
+size = Vector2(11, 18)
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_26dxe")
 autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, 2)
+shape = SubResource("RectangleShape2D_2oyov")
