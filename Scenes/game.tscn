@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://brrhhwg1yoges" path="res://assets/Grass block.png" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://cyte3esaigq8u" path="res://game.gd" id="1_eow3j"]
 [ext_resource type="Texture2D" uid="uid://x67vfrvly5cm" path="res://assets/without grass block.png" id="2_wrm1d"]
-[ext_resource type="PackedScene" uid="uid://c7l0h5i014xe8" path="res://Scenes/player.tscn" id="3_3dryh"]
+[ext_resource type="PackedScene" uid="uid://b7wenqdd23uat" path="res://Scenes/player2.tscn" id="3_3dryh"]
 [ext_resource type="Texture2D" uid="uid://lvopeitv2yg4" path="res://assets/box.png" id="4_rfjv2"]
 [ext_resource type="Texture2D" uid="uid://bmirrl4dqib7v" path="res://assets/bouncepad.png" id="5_1phco"]
 [ext_resource type="Texture2D" uid="uid://6rgxkkcdq7xo" path="res://assets/slanted box2.png" id="5_rku1e"]
