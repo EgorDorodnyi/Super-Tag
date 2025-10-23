@@ -66,8 +66,8 @@ func _game_over():
 		"Player":
 			get_tree().change_scene_to_file("res://Scenes/gameover_Player1.tscn")
 		"player 2":
-			get_tree().change_scene_to_file("res://assets/background_winter.png")
-		"player 3":
-			get_tree().change_scene_to_file("res://assets/background_winter.png")
-		"player 4":
-			get_tree().change_scene_to_file("res://assets/background_winter.png")
+			get_tree().change_scene_to_file("res://Scenes/gameover_Player2.tscn")
+		"Player 3":
+			get_tree().change_scene_to_file("res://Scenes/gameover_Player3.tscn")
+		"Player 4":
+			get_tree().change_scene_to_file("res://Scenes/gameover_Player4.tscn")
