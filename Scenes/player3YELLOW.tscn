@@ -1,6 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://btijnda8dqo26"]
+[gd_scene load_steps=9 format=3 uid="uid://btijnda8dqo26"]
 
 [ext_resource type="Texture2D" uid="uid://b8fr56yi3h6pv" path="res://assets/character_sprite2,3,4.png" id="1_2oyov"]
+[ext_resource type="Script" uid="uid://csp3w0cowgm6d" path="res://Scripts/player4_yellow.gd" id="1_gq6d6"]
+[ext_resource type="Texture2D" uid="uid://cdvt52qphem72" path="res://assets/Screenshot 2025-10-11 181326.png" id="3_ifj65"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gq6d6"]
 atlas = ExtResource("1_2oyov")
@@ -31,8 +33,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2oyov"]
+size = Vector2(11, 18)
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_gq6d6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_26dxe")
 autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, 2)
+shape = SubResource("RectangleShape2D_2oyov")
+
+[node name="TagIcon" type="Sprite2D" parent="."]
+position = Vector2(1, -11)
+scale = Vector2(0.0172414, 0.0165505)
+texture = ExtResource("3_ifj65")
