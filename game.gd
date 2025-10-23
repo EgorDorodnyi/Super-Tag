@@ -4,6 +4,7 @@ extends Node2D
 	$Player,
 	$"player 2",
 	$"Player 3",
+	$"Player 4",
 ]
 
 var tagger: CharacterBody2D = null
