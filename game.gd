@@ -7,7 +7,11 @@ extends Node2D
 	$"Player 4",
 ]
 
+@onready var game_timer = $Timer
+@onready var timer_label = $Timer/TimerLabel
+
 var tagger: CharacterBody2D = null
+var round_time := 120 #seconds
 
 func _ready():
 	randomize()
@@ -19,7 +23,19 @@ func _ready():
 	# Pick a random tagger
 	tagger = characters[randi() % characters.size()]
 	tagger.set_as_tagger(true)
+	
+	#Setup and start the timer
+	game_timer.wait_time = round_time
+	game_timer.start()
 
+func _process(delta):
+	if game_timer.time_left>0:
+		timer_label.text = str(int(game_timer.time_left)) + "s"
+		timer_label.add_theme_font_size_override("font_size", 40)
+	if game_timer.time_left <= 10:
+		timer_label.add_theme_color_override("font_color", Color.RED)
+	else:
+		timer_label.add_theme_color_override("font_color", Color.BLACK)
 func _physics_process(delta):
 	if not tagger:
 		return
