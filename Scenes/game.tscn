@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 [gd_scene load_steps=30 format=4 uid="uid://chbjpmjbyrd6d"]
+=======
+[gd_scene load_steps=31 format=4 uid="uid://chbjpmjbyrd6d"]
+>>>>>>> 8fe7d31f4cbb8b6bec37b177b47287afb6df9af6
 
 [ext_resource type="Texture2D" uid="uid://c0vawvtejtplk" path="res://assets/background_sky.png" id="1_3dryh"]
 [ext_resource type="Texture2D" uid="uid://brrhhwg1yoges" path="res://assets/Grass block.png" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://cyte3esaigq8u" path="res://game.gd" id="1_eow3j"]
 [ext_resource type="Texture2D" uid="uid://x67vfrvly5cm" path="res://assets/without grass block.png" id="2_wrm1d"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://c7l0h5i014xe8" path="res://scenes/player.tscn" id="3_3dryh"]
 [ext_resource type="Texture2D" uid="uid://cir33l0t3cbq5" path="res://assets/box.png" id="4_rfjv2"]
 [ext_resource type="Texture2D" uid="uid://brm6qu5nhkd4m" path="res://assets/bouncepad.png" id="5_1phco"]
@@ -15,6 +20,19 @@
 [ext_resource type="Texture2D" uid="uid://6ru7wd4fy1xl" path="res://assets/slanted box4.png" id="8_nb51f"]
 [ext_resource type="Texture2D" uid="uid://dct6md3vtegs4" path="res://assets/slanted box5.png" id="9_nnt18"]
 [ext_resource type="PackedScene" uid="uid://btijnda8dqo26" path="res://scenes/player3YELLOW.tscn" id="15_nb51f"]
+=======
+[ext_resource type="PackedScene" uid="uid://c7l0h5i014xe8" path="res://Scenes/player.tscn" id="3_3dryh"]
+[ext_resource type="Texture2D" uid="uid://lvopeitv2yg4" path="res://assets/box.png" id="4_rfjv2"]
+[ext_resource type="Texture2D" uid="uid://bmirrl4dqib7v" path="res://assets/bouncepad.png" id="5_1phco"]
+[ext_resource type="Texture2D" uid="uid://6rgxkkcdq7xo" path="res://assets/slanted box2.png" id="5_rku1e"]
+[ext_resource type="PackedScene" uid="uid://cddk8cbr6rpem" path="res://Scenes/player2BLUE.tscn" id="5_wowpa"]
+[ext_resource type="PackedScene" uid="uid://cxy7dgk0ihswb" path="res://Scenes/player3GREEEN.tscn" id="6_i6g32"]
+[ext_resource type="Texture2D" uid="uid://x8uhu847b5g1" path="res://assets/slanted box.png" id="6_rfjv2"]
+[ext_resource type="Texture2D" uid="uid://5r2i3s24y7yy" path="res://assets/slanted box3.png" id="7_1phco"]
+[ext_resource type="Texture2D" uid="uid://c8gwr8fcgcnk5" path="res://assets/slanted box4.png" id="8_nb51f"]
+[ext_resource type="Texture2D" uid="uid://bln1btoxalujx" path="res://assets/slanted box5.png" id="9_nnt18"]
+[ext_resource type="PackedScene" uid="uid://btijnda8dqo26" path="res://Scenes/player3YELLOW.tscn" id="15_nb51f"]
+>>>>>>> 8fe7d31f4cbb8b6bec37b177b47287afb6df9af6
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i6g32"]
 texture = ExtResource("1_3dryh")
@@ -2282,6 +2300,8 @@ physics_layer_0/collision_layer = 255
 physics_layer_0/collision_mask = 255
 sources/0 = SubResource("TileSetAtlasSource_1phco")
 
+[sub_resource type="Theme" id="Theme_nb51f"]
+
 [node name="game" type="Node2D"]
 position = Vector2(-20, 0)
 script = ExtResource("1_eow3j")
@@ -2303,6 +2323,7 @@ tile_map_data = PackedByteArray("AAAeAAcAAAAAAAAAAAAeAAgAAAAAAAEAAAAfAAcAAAABAAA
 tile_set = SubResource("TileSet_nb51f")
 
 [node name="Player" parent="." instance=ExtResource("3_3dryh")]
+<<<<<<< HEAD
 position = Vector2(-227, -124)
 scale = Vector2(0.9, 0.9)
 
@@ -2312,6 +2333,17 @@ scale = Vector2(1.3, 1.3)
 
 [node name="Player 3" parent="." instance=ExtResource("6_i6g32")]
 position = Vector2(-269, -139)
+=======
+position = Vector2(-252, -132)
+scale = Vector2(0.9, 0.9)
+
+[node name="player 2" parent="." instance=ExtResource("5_wowpa")]
+position = Vector2(-298, -146)
+scale = Vector2(1.3, 1.3)
+
+[node name="Player 3" parent="." instance=ExtResource("6_i6g32")]
+position = Vector2(-213, -147)
+>>>>>>> 8fe7d31f4cbb8b6bec37b177b47287afb6df9af6
 scale = Vector2(1.3, 1.3)
 collision_layer = 4
 collision_mask = 4
@@ -2319,6 +2351,25 @@ collision_mask = 4
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.1, 1.1)
 
+<<<<<<< HEAD
 [node name="CharacterBody2D" parent="." instance=ExtResource("15_nb51f")]
 position = Vector2(-343, -140)
 scale = Vector2(1.3, 1.3)
+=======
+[node name="Player 4" parent="." instance=ExtResource("15_nb51f")]
+position = Vector2(-339, -147)
+scale = Vector2(1.3, 1.3)
+collision_layer = 8
+collision_mask = 8
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="TimerLabel" type="Label" parent="Timer"]
+texture_filter = 2
+offset_left = -20.0
+offset_top = -284.0
+offset_right = 20.0
+offset_bottom = -261.0
+theme = SubResource("Theme_nb51f")
+>>>>>>> 8fe7d31f4cbb8b6bec37b177b47287afb6df9af6

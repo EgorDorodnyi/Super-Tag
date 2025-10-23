@@ -1,14 +1,30 @@
 extends Node2D
 
-@onready var characters = [
+@onready var game_timer = $Timer
+@onready var timer_label = $Timer/TimerLabel
+
+@onready var all_characters = [
 	$Player,
 	$"player 2",
 	$"Player 3",
+	$"Player 4",
 ]
-
 var tagger: CharacterBody2D = null
+var round_time := 60 #seconds
+var player_count := 4
+
+func set_player_count(count):
+	player_count = count
+
+var characters = []
 
 func _ready():
+	characters = all_characters.slice(0, player_count)
+
+	for i in range(player_count, all_characters.size()):
+		all_characters[i].hide()
+		all_characters[i].set_process(false)
+		all_characters[i].set_physics_process(false)
 	randomize()
 
 	# Hide all tag icons
@@ -18,8 +34,23 @@ func _ready():
 	# Pick a random tagger
 	tagger = characters[randi() % characters.size()]
 	tagger.set_as_tagger(true)
+	
+	#Setup and start the timer
+	game_timer.wait_time = round_time
+	game_timer.start()
 
-func _physics_process(delta):
+func _process(_delta):
+	if game_timer.time_left>0:
+		timer_label.text = str(int(game_timer.time_left)) + "s"
+		timer_label.add_theme_font_size_override("font_size", 40)
+		if game_timer.time_left <= 10:
+			timer_label.add_theme_color_override("font_color", Color.RED)
+		else:
+			timer_label.add_theme_color_override("font_color", Color.BLACK)
+	else:
+		_game_over()
+
+func _physics_process(_delta):
 	if not tagger:
 		return
 
@@ -40,3 +71,14 @@ func _change_tagger(new_tagger):
 	# Update to new tagger
 	tagger = new_tagger
 	tagger.set_as_tagger(true)
+
+func _game_over():
+	match tagger.name:
+		"Player":
+			get_tree().change_scene_to_file("res://Scenes/gameover_Player1.tscn")
+		"player 2":
+			get_tree().change_scene_to_file("res://Scenes/gameover_Player2.tscn")
+		"Player 3":
+			get_tree().change_scene_to_file("res://Scenes/gameover_Player3.tscn")
+		"Player 4":
+			get_tree().change_scene_to_file("res://Scenes/gameover_Player4.tscn")

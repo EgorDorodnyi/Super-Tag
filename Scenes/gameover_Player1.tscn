@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://8e1nls81o6rw"]
+
+[ext_resource type="Texture2D" uid="uid://dajsgcgak3eeq" path="res://assets/player1Lose.png" id="1_5rm05"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(574.5, 327)
+scale = Vector2(1.43125, 1.288)
+texture = ExtResource("1_5rm05")
