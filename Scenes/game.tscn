@@ -2328,6 +2328,7 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="Timer" type="Timer" parent="."]
+one_shot = true
 
 [node name="TimerLabel" type="Label" parent="Timer"]
 texture_filter = 2
