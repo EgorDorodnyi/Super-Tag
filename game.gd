@@ -1,19 +1,30 @@
 extends Node2D
 
-@onready var characters = [
+@onready var game_timer = $Timer
+@onready var timer_label = $Timer/TimerLabel
+
+@onready var all_characters = [
 	$Player,
 	$"player 2",
 	$"Player 3",
 	$"Player 4",
 ]
-
-@onready var game_timer = $Timer
-@onready var timer_label = $Timer/TimerLabel
-
 var tagger: CharacterBody2D = null
-var round_time := 5 #seconds
+var round_time := 60 #seconds
+var player_count := 4
+
+func set_player_count(count):
+	player_count = count
+
+var characters = []
 
 func _ready():
+	characters = all_characters.slice(0, player_count)
+
+	for i in range(player_count, all_characters.size()):
+		all_characters[i].hide()
+		all_characters[i].set_process(false)
+		all_characters[i].set_physics_process(false)
 	randomize()
 
 	# Hide all tag icons
