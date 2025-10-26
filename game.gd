@@ -12,19 +12,23 @@ extends Node2D
 var tagger: CharacterBody2D = null
 var round_time := 60 #seconds
 var player_count := 4
+var characters = []
 
 func set_player_count(count):
 	player_count = count
 
-var characters = []
 
 func _ready():
-	characters = all_characters.slice(0, player_count)
+	characters = []
+	for i in range(player_count):
+		if all_characters[i]:
+			characters.append(all_characters[i])
 
 	for i in range(player_count, all_characters.size()):
-		all_characters[i].hide()
-		all_characters[i].set_process(false)
-		all_characters[i].set_physics_process(false)
+		if all_characters[i]:
+			all_characters[i].hide()
+			all_characters[i].set_process(false)
+			all_characters[i].set_physics_process(false)
 	randomize()
 
 	# Hide all tag icons

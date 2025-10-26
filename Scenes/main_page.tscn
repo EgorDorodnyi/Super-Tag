@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvn88da7rpj3a"]
+
+[ext_resource type="Texture2D" uid="uid://u5cpf07evg6x" path="res://assets/supertag start page bg with menu.png" id="1_n6snj"]
+[ext_resource type="Script" uid="uid://c2na6lxaahsqu" path="res://Scripts/main_page.gd" id="2_uc2y8"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(577, 326)
+scale = Vector2(1.25875, 1.289)
+texture = ExtResource("1_n6snj")
+script = ExtResource("2_uc2y8")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -86.0
+offset_top = -37.0
+offset_right = 129.0
+offset_bottom = 40.0
+flat = true
+
+[node name="Button2" type="Button" parent="."]
+offset_left = -85.7994
+offset_top = 60.512
+offset_right = 129.201
+offset_bottom = 137.512
+flat = true
