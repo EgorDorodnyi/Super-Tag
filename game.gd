@@ -10,7 +10,7 @@ extends Node2D
 	$"Player 4",
 ]
 var tagger: CharacterBody2D = null
-var round_time := 60 #seconds
+var round_time := 5 #seconds
 var player_count := 4
 var characters = []
 

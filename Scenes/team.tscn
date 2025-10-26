@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ttof7g006q50"]
+
+[ext_resource type="Texture2D" uid="uid://31sdu3alan32" path="res://assets/credits.png" id="1_3k68g"]
+[ext_resource type="Script" uid="uid://b8m25bpeb2ioy" path="res://Scripts/team.gd" id="2_lughb"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(577.625, 325.25)
+scale = Vector2(0.609041, 0.606818)
+texture = ExtResource("1_3k68g")
+script = ExtResource("2_lughb")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 649.0
+offset_top = 415.0
+offset_right = 915.0
+offset_bottom = 513.0
+flat = true
