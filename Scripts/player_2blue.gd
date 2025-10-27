@@ -1,13 +1,18 @@
 extends CharacterBody2D
+#Tag icon variable
 @onready var tag_icon = $TagIcon
+#Bounce pad tile map layer reference
 @onready var tilemap=$"../TileMapLayer3"
+#Character sprite node reference
 @onready var animated_sprite = $AnimatedSprite2D
 
-
+#Tagger
 var is_tagger: bool=false
+#speed of meovement
 const SPEED = 150.0
+# Jumpig height
 const JUMP_VELOCITY = -370.0
-
+#bouncing height of the bounce pad
 var BOUNCE_VELOCITY = -770.0
 
 func _physics_process(delta):
