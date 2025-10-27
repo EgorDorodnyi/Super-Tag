@@ -11,7 +11,7 @@ extends Node2D
 ]
 var tagger: CharacterBody2D = null
 var round_time := 5 #seconds
-var player_count := 4
+var player_count := Global.player_count
 var characters = []
 
 func set_player_count(count):

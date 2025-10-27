@@ -1,8 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://ca1txiumirb6i"]
+[gd_scene load_steps=3 format=3 uid="uid://ca1txiumirb6i"]
 
 [ext_resource type="Texture2D" uid="uid://b2l3s5gp2ec5t" path="res://assets/player3Lose.png" id="1_187hn"]
+[ext_resource type="Script" uid="uid://b1b6555kcqhcd" path="res://Scripts/gameover_player_3.gd" id="2_8yam5"]
 
 [node name="Sprite2D" type="Sprite2D"]
-position = Vector2(576.5, 325.5)
-scale = Vector2(1.44375, 1.286)
+position = Vector2(574.773, 323.784)
+scale = Vector2(0.615216, 0.614916)
 texture = ExtResource("1_187hn")
+script = ExtResource("2_8yam5")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = -176.805
+offset_top = -175.282
+offset_right = 180.195
+offset_bottom = -40.2824
+flat = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = -178.0
+offset_right = 179.0
+offset_bottom = 135.0
+flat = true
